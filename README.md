@@ -123,7 +123,7 @@ including_dynamic=True
 
 视频演示:
  
-[YouTube视频链接]([https://www.youtube.com/watch?v=VIDEO_ID](https://youtu.be/dphhu2mNeyQ?si=ebsS6i-X9zZ5phVX))
+[YouTube视频链接](https://youtu.be/dphhu2mNeyQ?si=ebsS6i-X9zZ5phVX)
 
 ## Visualization
 
