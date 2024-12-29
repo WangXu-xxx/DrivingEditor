@@ -14,7 +14,8 @@ In recent years, with the development of autonomous driving, 3D reconstruction f
 cd PATH_TO_CODE
 conda create --name DrivingEditor python=3.9
 conda activate DrivingEditor
-# Clone our code
+
+# Downloading our code
 git clone https://github.com/WangXu-xxx/DrivingEditor.git
 
 # Install requirements.
