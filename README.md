@@ -9,6 +9,8 @@ In recent years, with the development of autonomous driving, 3D reconstruction f
 
 ## Get started
 ### Environment
+
+Our experiments are conducted in Ubuntu20.04 with Anaconda3, Pytorch 2.2.2, CUDA 11.8, A6000 GPU.
 ```
 # Make a conda environment.
 cd PATH_TO_CODE
