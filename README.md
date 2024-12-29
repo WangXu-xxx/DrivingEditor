@@ -119,6 +119,10 @@ source_path=PATH_TO_DATA \
 model_path=eval_output/scene_id \
 including_dynamic=True
 ```
+## 🎥Video
+
+
+
 ## Visualization
 
 ### Scene Reconstruction
