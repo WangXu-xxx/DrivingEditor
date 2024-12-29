@@ -155,6 +155,10 @@ https://github.com/user-attachments/assets/5aae487d-e05e-44ef-9566-e23da980f467
 
 ### Urban Scene 2:
 
+https://github.com/user-attachments/assets/b990916b-9f0a-4ec8-a2f2-bdd152d4b468
+
+### Urban Scene 3:
+
 https://github.com/user-attachments/assets/1e5fc249-94e9-456f-9db5-e32185455a42
 
 ### Unstructured Scene:
@@ -163,5 +167,8 @@ https://github.com/user-attachments/assets/a06b1f56-dbb7-4826-9123-3497297d2dfd
 
 ### Scene Recomposition
 
-https://github.com/user-attachments/assets/bd80ef9f-659d-4604-a72a-453966fbee36
+https://github.com/user-attachments/assets/394b1467-d700-4eb1-992d-633958280550
+
+https://github.com/user-attachments/assets/7582869f-a243-47a9-94f0-d388d230a30f
+
 
