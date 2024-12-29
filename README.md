@@ -2,3 +2,8 @@
 Official implementation of "DrivingEditor: 4D Composite Gaussian Splatting for Reconstruction and Edition of Dynamic Autonomous Driving Scenes". Submitted to T-CSVT on December **, 2024.
 
 ![main_branch](https://github.com/user-attachments/assets/48782666-ff6a-44d7-adcc-8c763c6ae76a)
+
+Abstract
+
+In recent years, with the development of autonomous driving, 3D reconstruction for unbounded large-scale scenes has attracted researchers' attention. Existing methods have achieved outstanding reconstruction accuracy in autonomous driving scenes, but most of them lack the ability to edit scenes. Although some methods have the capability to edit scenarios, they are highly dependent on manually annotated 3D bounding boxes, leading to their poor scalability. To address the issues, we introduce a new Gaussian representation, called DrivingEditor, which decouples the scene into two parts and handles them by separate branches to individually model the dynamic foreground objects and the static background during the training process. By proposing a framework for decoupled modeling of scenarios, we can achieve accurate editing of any dynamic target, such as dynamic objects removal, adding and etc, meanwhile improving the reconstruction quality of autonomous driving scenes especially the dynamic foreground objects, without resorting to 3D bounding boxes. Extensive experiments on Waymo Open Dataset and KITTI benchmarks demonstrate the performance in 3D reconstruction for both dynamic and static scenes. Besides, we conduct extra experiments on unstructured large-scale scenarios, which can more convincingly demonstrate the performance and robustness of our proposed model when rendering the unstructured scenes.
+
