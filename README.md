@@ -126,3 +126,13 @@ including_dynamic=True
 Waymo and KITTI:
 
 ![comparison_github](https://github.com/user-attachments/assets/0518ba14-c7ba-4410-91de-93094ccbd335)
+
+Unstructured Scenes:
+
+![mining_results_github](https://github.com/user-attachments/assets/b6a5a18c-b553-46f2-a718-18282b8fdb86)
+
+### Scene Editing
+
+Dynamic Removal:
+
+![remove](https://github.com/user-attachments/assets/5f231741-bccc-4ae4-9f29-1692003e74db)
