@@ -149,21 +149,20 @@ Dynamic Removal:
 
 ## 🎞️Demo
 
-### Urban Scene 1:
+### Urban Scenes:
 
 https://github.com/user-attachments/assets/5aae487d-e05e-44ef-9566-e23da980f467
 
-### Urban Scene 2:
-
 https://github.com/user-attachments/assets/b990916b-9f0a-4ec8-a2f2-bdd152d4b468
-
-### Urban Scene 3:
 
 https://github.com/user-attachments/assets/1e5fc249-94e9-456f-9db5-e32185455a42
 
-### Unstructured Scene:
+### Unstructured Scenes:
 
 https://github.com/user-attachments/assets/a06b1f56-dbb7-4826-9123-3497297d2dfd
+
+https://github.com/user-attachments/assets/cba15c16-4cde-43d1-8f7f-d80e707ccaae
+
 
 ### Scene Recomposition
 
