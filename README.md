@@ -166,8 +166,8 @@ https://github.com/user-attachments/assets/cba15c16-4cde-43d1-8f7f-d80e707ccaae
 
 ### Scene Recomposition
 
-https://github.com/user-attachments/assets/394b1467-d700-4eb1-992d-633958280550
+https://github.com/user-attachments/assets/de494818-cda3-4b7f-bc28-8ae5f39d0b9a
 
-https://github.com/user-attachments/assets/7582869f-a243-47a9-94f0-d388d230a30f
+
 
 
