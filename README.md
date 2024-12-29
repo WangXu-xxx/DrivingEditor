@@ -11,9 +11,9 @@ In recent years, with the development of autonomous driving, 3D reconstruction f
 ### Environment
 ```
 # Make a conda environment.
-cd PATH_TO_PVG
-conda create --name pvg python=3.9
-conda activate pvg
+cd PATH_TO_CODE
+conda create --name DrivingEditor python=3.9
+conda activate DrivingEditor
 
 # Install requirements.
 pip install -r requirements.txt
@@ -47,19 +47,16 @@ export BUILD_WITH_CUDA=True
 python -m pip install -e segment_anything
 python -m pip install -e GroundingDINO
 
-(2) Generation Dynamic Gray mask
+(2) Generating Dynamic mask
 cd Tracking-Anything-with-DEVA
 python process_mask.py (modify the path_to_image in the .py)
 
 ```
-Having obtained the instance id of the dynamic objects, extract the objects in the original mask by running `python mask.py`. The obtained dynamic_images are stored at the folders `dynamic_image_0{0, 1, 2, 3, 4, 5}`.
+Having obtained the instance id of the dynamic objects, extract the objects in the original mask by running `python mask.py`. The obtained dynamic_images are stored at the folders `dynamic_image_0{0, 1, 2, 3}`.
 
 ### Sky mask preparation
 
 We provide an example script `scripts/extract_mask_waymo.py` to extract the sky mask from the extracted Waymo dataset, follow instructions [here](https://github.com/PJLab-ADG/neuralsim/blob/main/dataio/autonomous_driving/waymo/README.md#extract-mask-priors----for-sky-pedestrian-etc) to setup the Segformer environment.
-
-### Ply data preparation
-python auto_train.py (this operation will generate the points3d.ply if there is not points3d.ply inside the folder). Then use tools (such as CloudCompare) to crop the concatenated dynamic car point clouds (named points3d_dynamic_0,1,2.ply).
 
 ### Data preparation
 ```
@@ -86,74 +83,46 @@ data
 Modify the arg including_dynamic in the `waymo_reconstruction.yaml` to True.
 If set to False, meaning there is no dynamic objects in the scene.
 
-以鱼眼相机为例
-
 ```
 # image reconstruction (with dynamic objects)
 python train.py \
 --config configs/waymo_reconstruction.yaml \
 source_path=PATH_TO_DATA \
 model_path=eval_output/scene_id \
-including_dynamic=True \
-fisheye=True
+including_dynamic=True
 
 # image reconstruction (without dynamic objects)
 python train.py \
 --config configs/waymo_reconstruction.yaml \
 source_path=PATH_TO_DATA \
 model_path=eval_output/scene_id \
-including_dynamic=False \
-fisheye=True
+including_dynamic=False
 ```
 After training, evaluation results can be found in `{EXPERIMENT_DIR}/eval` directory.
 
-### Scene Reconstruction (not saving nuscenes data) 
+### Scene Reconstruction
 
 ```
-target_path is the folder including the added objects. 
-By running this, we can obtain the rendered images that includes the static background and the dynamic objects from another scene.
-
-以鱼眼相机为例
+By running this, we can obtain the rendered images that includes the static background without dynamic objects.
 
 # image reconstruction (without dynamic objects)
 python render.py \
 --config configs/waymo_render.yaml \
-source_path=/hy-tmp/day/145003_2 \
-model_path=/hy-tmp/day/145003_2/output/eval_output \
-including_dynamic=False \
-adding=False \
-is_fisheye=True
+source_path=PATH_TO_DATA \
+model_path=eval_output/scene_id \
+including_dynamic=False
 
 # image reconstruction (removing dynamic objects)
 python render.py \
 --config configs/waymo_render.yaml \
-source_path=/hy-tmp/day/145003_2 \
-model_path=/hy-tmp/day/145003_2/output/eval_output \
-including_dynamic=True \
-adding=False \
-is_fisheye=True
-
-# image reconstruction (adding dynamic objects)
-python render.py \
---config configs/waymo_render.yaml \
-source_path=/hy-tmp/day/145003_2 \
-model_path=/hy-tmp/day/145003_2/output/eval_output \
-target_path=/hy-tmp/day/144703_1 \
-including_dynamic=False \
-adding=True \
-is_fisheye=True
+source_path=PATH_TO_DATA \
+model_path=eval_output/scene_id \
+including_dynamic=True
 ```
+## Visualization
 
+### Scene Reconstruction
 
-### Scene Reconstruction (adding dynamic objects and save nuscenes data) 
+Waymo and KITTI:
 
-```
-python separate.py \
---config configs/waymo_render.yaml \
-source_path=/hy-tmp/day/145003_2 \
-model_path=/hy-tmp/day/145003_2/output/eval_output \
-target_path=/hy-tmp/day/144033_1 \
-including_dynamic=False \
-adding=True \
-is_fisheye=True
-```
+![comparison_github](https://github.com/user-attachments/assets/0518ba14-c7ba-4410-91de-93094ccbd335)
