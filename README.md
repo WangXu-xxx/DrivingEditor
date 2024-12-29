@@ -123,7 +123,8 @@ including_dynamic=True
 
 视频演示:
  
-[YouTube视频链接](https://youtu.be/dphhu2mNeyQ?si=ebsS6i-X9zZ5phVX)
+[DrivingEditor: 4D Composite Gaussian Splatting for Reconstruction and Edition of Dynamic Autonomous Driving Scenes
+](https://youtu.be/dphhu2mNeyQ?si=ebsS6i-X9zZ5phVX)
 
 ## Visualization
 
